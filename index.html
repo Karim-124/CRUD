@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Comp0atible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <h2 class="font-weight-bolder text-center my-3">CRUD</h2>
+    <h3 class="text-center  my-1 font-weight-lighter">Product Mangement System</h3>
+
+    <div class="container my-4">
+
+    
+        <label for="" class="font-weight-bold">Product Name</label>
+        <input type="text" class="form-control text-white  bg-dark" placeholder="enter your title" id="nameInput">
+
+        <div class="inputsNumber">
+            <div class="row">
+                <div class="col-md-3">
+                <label for="" class="font-weight-bold mt-3">Product Price</label>
+                    <input onkeyup="getTotal()" type="number" id="proPrice" class="form-control text-white bg-dark mt-2 mb-2 getT" placeholder="Price">
+                </div>
+
+
+                <div class="col-md-3">
+                    <label for="" class="font-weight-bold mt-3">Product Taxs</label>
+                    <input onkeyup="getTotal()" type="number" id="proTaxes" class="form-control text-white bg-dark mt-2 mb-2" placeholder="Taxs">
+                </div>
+
+                <div class="col-md-3">
+                   <label for="" class="font-weight-bold mt-3">Product Ads</label>
+                    <input onkeyup="getTotal()" type="text" id="proAds" class="form-control text-white bg-dark mt-2 mb-2 " placeholder="Ads">
+                </div>   
+
+                <div class="col-md-2">
+                <label for="" class="font-weight-bold mt-3"> Discounts</label>
+                <input onkeyup="getTotal()" type="text"id="proDiscount"  class="form-control text-white bg-dark mt-2 mb-2" placeholder="Discount">
+                </div>
+
+                <div class="col-md-1 position-relative">
+                    <!-- <button class="btn btn-outline-info bg-transparent mt-5 mb-2">Total</button> -->
+                    <small id="total" class="border p-1 font-weight-bolder border-0 position-absolute  font-weight-bold"></small>
+                </div>
+
+            </div>
+        </div>
+        <label for="" class="font-weight-bold ">Product count</label>
+        <input type="number" class="form-control text-white bg-dark mt-1 mb-2" placeholder="Counts" id="CountInput">
+        <label for="" class="font-weight-bold">Product Category</label>
+        <input type="text" class="form-control text-white bg-dark mt-1 mb-2" placeholder="Category" id="CategoryInput">
+
+        <button id="createBtn" class="btn btn-info w-100 p-2 my-3 font-weight-bold">Create</button>
+
+        <label for="" class="font-weight-bold">Search by Name </label>
+        <input type="text" onkeyup="searchProduct(this.value)" class="form-control text-white bg-dark mt-1 mb-1" placeholder="Search" id="searchInput">
+
+
+        <div class="searchBtns">
+            <div class="row">
+                <div class="col-md-5">
+                    <button id="searchbtn" class="btn btn-info w-100 p-2 my-3 font-weight-bold" style="display: none;">Search By Title</button>
+                </div>
+                <div class="offset-2 col-md-5">
+                    <button id="searchCategory" style="display: none;" class="btn btn-info w-100 p-2 my-3 font-weight-bold">Search By Category</button>
+                </div>
+                <div class="col-md-12">
+                    <button  id="deleteAllBtn" 
+                    ;" class="btn btn-danger  w-100 p-2  my-3 font-weight-bold">Delete All</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <table class="table bg-transparent text-white table-responsive-md table-striped table-dark ">
+            <thead>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Taxs</th>
+                <th>Ads</th>
+                <th>Total</th>
+                <th>Discount</th>
+                <th>Category</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </thead>
+
+            <tbody id="tableBody" class="text-white bg-transparent">
+
+            </tbody>
+        </table>
+
+
+
+
+
+    </div>
+    
+
+
+    <h1 id="test" style="background-color: brown;"></h1>
+
+
+    <script src="test.js"></script>
+</body>
+</html>

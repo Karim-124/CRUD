@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    font-family: system-ui ;
+    background-color: #222;
+    color: #fff;
+}
+#total::before{
+    content: "Total:";
+}
+#total{
+    top: 60%;
+    left: 0;
+    padding: 10px;
+}
+/* 
+#tableB{
+    @media (max-width:425px){
+        overflow-x:auto;
+    }
+} */
